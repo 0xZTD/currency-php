@@ -1,0 +1,19 @@
+{
+    "name": "zeth/currency-php",
+    "autoload": {
+        "psr-4": {
+            "CurrencyPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zestx5",
+            "email": "buyankov.ilya@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.13",
+        "nyholm/psr7": "^1.8",
+        "nyholm/psr7-server": "^1.1"
+    }
+}
