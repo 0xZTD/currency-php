@@ -15,9 +15,7 @@ $app->get("/currency", function (Request $request, Response $response, $args) {
     $output = curl_exec($ch);
     $xmlobj = new SimpleXMLElement($output);
     $json = json_encode($xmlobj);
-    $array = json_decode($json, TRUE);
-    $v = $array["Record"]["Value"];
-    $response->getBody()->write($v);
-    return $response;
+    $response->getBody()->write($json);
+    return $response->withHeader('Content-Type', 'application/json');
 });
 $app->run();
